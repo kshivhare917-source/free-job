@@ -1,0 +1,201 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All India Free Private Job - Job Promotion</title>
+  <style>
+    :root{--accent:#0b5ed7;--muted:#666}
+    body{font-family:Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f6f8fb;color:#222}
+    header{background:linear-gradient(90deg,#0b5ed7,#3aa0ff);color:white;padding:28px 20px;display:flex;align-items:center;justify-content:space-between}
+    header img{height:50px}
+    nav a{color:white;margin-left:18px;text-decoration:none;font-weight:500}
+    nav a:hover{text-decoration:underline}
+    .hero{padding:50px 20px;text-align:center;background:#eaf3ff}
+    .hero h1{font-size:32px;margin:0 0 10px;color:#0b5ed7}
+    .hero p{font-size:18px;color:#444;max-width:640px;margin:auto}
+    .container{max-width:980px;margin:20px auto;padding:16px}
+    h1,h2{margin:0 0 10px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#fff;border:1px solid #e3e6ee;padding:8px 12px;border-radius:999px;font-size:14px}
+    .companies{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 4px 14px rgba(12,38,71,0.06);border:1px solid #eef2fb}
+    .card h3{margin:0 0 6px;font-size:16px;color:#0b5ed7}
+    .meta{font-size:13px;color:var(--muted)}
+    .jobs{margin-top:18px}
+    ul.positions{list-style:none;padding:0;margin:8px 0;display:flex;flex-wrap:wrap;gap:8px}
+    ul.positions li{background:#fff;border:1px dashed #d8e7ff;padding:8px 10px;border-radius:6px}
+    form{background:#fff;padding:14px;border-radius:10px;margin-top:14px;border:1px solid #eef2fb}
+    label{display:block;font-weight:600;margin-top:10px}
+    input[type=text],input[type=email],select,textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #d6dcea;margin-top:6px}
+    input[type=file]{margin-top:8px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border:none;border-radius:8px;cursor:pointer;margin-top:12px}
+    .btn:hover{opacity:0.9}
+    .note{font-size:13px;color:var(--muted);margin-top:6px}
+    footer{padding:20px;text-align:center;color:var(--muted);font-size:13px;background:#f1f4fa;margin-top:30px}
+    #whatsappBtn{display:none;background:#25D366;color:white;font-weight:600;padding:10px 16px;border-radius:8px;text-decoration:none;display:inline-block;margin-top:10px}
+    @media(max-width:640px){.row{grid-template-columns:1fr}} 
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://via.placeholder.com/150x50?text=LOGO" alt="Company Logo" />
+    <nav>
+      <a href="#companies">Companies</a>
+      <a href="#locations">Locations</a>
+      <a href="#positions">Positions</a>
+      <a href="#applyForm">Apply</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Job Promotion Portal</h1>
+    <p>Apply for Private Limited and MNC jobs across India. Trusted companies, multiple locations, and simple application process.</p>
+  </section>
+
+  <main class="container">
+    <section>
+      <h2 id="companies">Companies</h2>
+      <p class="note">Select a company to see details and available positions.</p>
+      <div class="companies"></div>
+    </section>
+
+    <section class="jobs">
+      <h2 id="locations">Locations</h2>
+      <div class="chips"></div>
+
+      <h2 id="positions" style="margin-top:18px">Job Positions</h2>
+      <ul class="positions"></ul>
+    </section>
+
+    <section class="apply">
+      <h2>Apply Now</h2>
+      <form id="applyForm">
+        <div class="row">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required placeholder="आपका नाम" />
+          </div>
+          <div>
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" required placeholder="10-digit mobile" />
+          </div>
+        </div>
+
+        <label for="email">Email (optional)</label>
+        <input type="email" id="email" placeholder="example@email.com" />
+
+        <div class="row">
+          <div>
+            <label for="companySelect">Select Company</label>
+            <select id="companySelect" required></select>
+          </div>
+          <div>
+            <label for="locationSelect">Select Location</label>
+            <select id="locationSelect" required></select>
+          </div>
+        </div>
+
+        <label for="positionSelect">Select Position</label>
+        <select id="positionSelect" required></select>
+
+        <label for="qual">Education / Qualification</label>
+        <input type="text" id="qual" placeholder="10th / 12th / ITI / Graduate" />
+
+        <label for="resume">Upload Resume (optional)</label>
+        <input type="file" id="resume" accept=".pdf,.doc,.docx,.txt" />
+
+        <p class="note">Note: Demo form — submissions are saved locally in your browser. You can download them after submit.</p>
+
+        <button class="btn" type="submit">Submit Application</button>
+      </form>
+
+      <a href="https://wa.me/918737975096" target="_blank" id="whatsappBtn">Send via WhatsApp</a>
+
+      <div id="result" style="margin-top:12px"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2025 All India Free Private Job Portal</div>
+    <div>Designed for quick job promotions • Locations: All India (Gujarat, Haryana, Delhi, Noida, Rajasthan, Bengaluru, Chennai, Pune, MP, UP ...)</div>
+  </footer>
+
+  <script>
+    const data = {
+      companies: [
+        {name:'Maruti Suzuki', about:'Leading automobile manufacturer.', contact:'8737975096'},
+        {name:'Tata Motors', about:'Automotive giant with multiple plants.', contact:'8737975096'},
+        {name:'Yazaki India Pvt. Ltd.', about:'Wiring harness & components maker.', contact:'8737975096'},
+        {name:'Dhoot Transmission Pvt. Ltd.', about:'Transmission parts manufacturer.', contact:'8737975096'},
+        {name:'Motherson Sumi Wiring Pvt. Ltd.', about:'Automotive wiring systems.', contact:'8737975096'},
+        {name:'UNO Minda Pvt. Ltd.', about:'Auto components & electronics.', contact:'8737975096'}
+      ],
+      locations:['All India','Gujarat','Haryana','Delhi','Noida','Rajasthan','Bengaluru','Chennai','Pune','Madhya Pradesh','Uttar Pradesh','Other States'],
+      positions:['Helper','Machine Operator','Supervisor','Computer Operator','Quality & Assembly Staff','Other']
+    };
+
+    const companiesEl = document.querySelector('.companies');
+    const companySelect = document.getElementById('companySelect');
+    data.companies.forEach((c,i)=>{
+      const card = document.createElement('div'); card.className='card';
+      card.innerHTML = `<h3>${c.name}</h3><div class="meta">${c.about}</div><div style="margin-top:8px"><strong>Contact:</strong> ${c.contact}</div><div style="margin-top:8px"><button class="btn" onclick="scrollToApply(${i})">Apply for ${c.name}</button></div>`;
+      companiesEl.appendChild(card);
+      const opt = document.createElement('option'); opt.value = c.name; opt.textContent = c.name; companySelect.appendChild(opt);
+    });
+
+    const locsEl = document.querySelector('.chips');
+    const locationSelect = document.getElementById('locationSelect');
+    data.locations.forEach(loc=>{
+      const span = document.createElement('div'); span.className='chip'; span.textContent=loc; locsEl.appendChild(span);
+      const opt = document.createElement('option'); opt.value=loc; opt.textContent=loc; locationSelect.appendChild(opt);
+    });
+
+    const posEl = document.querySelector('.positions');
+    const positionSelect = document.getElementById('positionSelect');
+    data.positions.forEach(p=>{
+      const li = document.createElement('li'); li.textContent = p; posEl.appendChild(li);
+      const opt = document.createElement('option'); opt.value=p; opt.textContent=p; positionSelect.appendChild(opt);
+    });
+
+    function scrollToApply(index){
+      document.getElementById('companySelect').value = data.companies[index].name;
+      document.querySelector('#applyForm').scrollIntoView({behavior:'smooth'});
+    }
+
+    const form = document.getElementById('applyForm');
+    const result = document.getElementById('result');
+    const whatsappBtn = document.getElementById('whatsappBtn');
+    const STORAGE_KEY = 'job_applications_demo';
+
+    function loadApps(){
+      try{ return JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]'); }catch(e){return[]}
+    }
+    function saveApp(obj){
+      const arr = loadApps(); arr.push(obj); localStorage.setItem(STORAGE_KEY,JSON.stringify(arr));
+    }
+
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const mobile = document.getElementById('mobile').value.trim();
+      if(!/^\d{10}$/.test(mobile)) { alert('Please enter valid 10-digit mobile number'); return; }
+      const email = document.getElementById('email').value.trim();
+      const company = document.getElementById('companySelect').value;
+      const location = document.getElementById('locationSelect').value;
+      const position = document.getElementById('positionSelect').value;
+      const qual = document.getElementById('qual').value.trim();
+      const resumeFile = document.getElementById('resume').files[0];
+      let resumeData = null;
+      if(resumeFile){ resumeData = {name: resumeFile.name, size: resumeFile.size, type: resumeFile.type}; }
+
+      const application = {id:Date.now(),name,mobile,email,company,location,position,qual,resume:resumeData,submittedAt:new Date().toISOString()};
+      saveApp(application);
+
+      result.innerHTML = `<div class="card"><strong>धन्यवाद!</strong> आपकी आवेदन भेज दी गयी है।<div class="note" style="margin-top:8px">Send your details via WhatsApp if you wish: <a href="#" id="downloadLink">Click Here</a></div></div>`;
+      whatsappBtn.style.display = 'inline-block';
+    });
+  </script>
+</body>
+</html>
